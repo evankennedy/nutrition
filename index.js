@@ -12,7 +12,6 @@ program
 var current = new profile();
 
 async.series([
-	callback => db.loadDatabase(callback),
 	callback => require('./loadCsv')(program.load, callback),
 	callback => {
 		async.waterfall([
